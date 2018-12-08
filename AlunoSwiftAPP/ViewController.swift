@@ -20,6 +20,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return cell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete{
+            // implement delete
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.alunoTableview.dataSource = self
@@ -36,10 +42,29 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         Alamofire.request("https://gilsonpolito-api.herokuapp.com/alunos", method: .get).responseJSON{(responseData) -> Void in
             let alunoJSON = JSON(responseData.result.value!)
             self.alunos = alunoJSON.arrayObject as! [[String:AnyObject]]
-            if self.alunos.count>0{
+            if self.alunos.count > 0 {
                 self.alunoTableview.reloadData()
             }
             self.refresh.endRefreshing()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "novoAluno", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "novoAluno" {
+            let indexPaths = self.alunoTableview!.indexPathsForSelectedRows!
+            let indexPath = indexPaths[0] as NSIndexPath
+            let vc = segue.destination as! NovoAlunoViewController
+            let dict = self.alunos[indexPath.row]
+            print(dict["nome"] as! String)
+            vc.txtNome?.text = dict["nome"] as? String
+        }
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
 }
