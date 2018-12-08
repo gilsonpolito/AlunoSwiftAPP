@@ -17,7 +17,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         var dict = alunos[indexPath.row]
         cell.lblNome.text = dict["nome"] as? String
         cell.lblNota.text = dict["nota"]?.stringValue
-        
         return cell
     }
     

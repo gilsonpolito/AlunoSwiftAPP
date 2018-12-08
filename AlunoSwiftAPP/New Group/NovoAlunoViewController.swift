@@ -19,8 +19,6 @@ class NovoAlunoViewController: UIViewController {
         Alamofire.request(url, method: .post, parameters: json, encoding: JSONEncoding.default, headers:nil).responseJSON{(responseData) -> Void in
             switch responseData.result{
             case .success(_):
-                
-                //self.performSegue(withIdentifier: "listaAlunos", sender: self)
                 _ = self.navigationController?.popToRootViewController(animated: true)
             case .failure(_):
                 let alert = UIAlertController(title: "Falha", message: "Erro ao executar chamada na API", preferredStyle: .alert)
