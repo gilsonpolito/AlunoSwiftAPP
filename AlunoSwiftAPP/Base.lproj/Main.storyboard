@@ -129,7 +129,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQh-r8-n5L">
-                                                    <rect key="frame" x="318" y="11" width="37" height="21"/>
+                                                    <rect key="frame" x="318" y="11" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -144,9 +144,9 @@
                                             <constraints>
                                                 <constraint firstItem="bQh-r8-n5L" firstAttribute="top" secondItem="Azo-ef-bSS" secondAttribute="top" constant="11" id="4iM-hk-Mm7"/>
                                                 <constraint firstItem="OGm-6f-lOC" firstAttribute="top" secondItem="Azo-ef-bSS" secondAttribute="top" constant="11" id="8NF-Wm-di6"/>
-                                                <constraint firstItem="bQh-r8-n5L" firstAttribute="leading" secondItem="OGm-6f-lOC" secondAttribute="trailing" constant="261" id="EoA-6k-nuZ"/>
+                                                <constraint firstItem="bQh-r8-n5L" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="OGm-6f-lOC" secondAttribute="trailing" constant="8" symbolic="YES" id="Hdl-nV-O8f"/>
                                                 <constraint firstItem="OGm-6f-lOC" firstAttribute="leading" secondItem="Azo-ef-bSS" secondAttribute="leading" constant="15" id="STq-qE-Pb3"/>
-                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="bQh-r8-n5L" secondAttribute="trailing" symbolic="YES" id="cXo-Vq-cFk"/>
+                                                <constraint firstAttribute="trailing" secondItem="bQh-r8-n5L" secondAttribute="trailing" constant="15" id="cXo-Vq-cFk"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -169,10 +169,9 @@
                     <navigationItem key="navigationItem" id="Rvh-J9-DJk">
                         <nil key="title"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="o13-j6-PTq">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="CeK-te-OIU">
-                                <rect key="frame" x="323" y="7" width="36" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" id="CeK-te-OIU">
+                                <rect key="frame" x="337" y="11" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Novo"/>
                                 <connections>
                                     <segue destination="kw2-Cs-WTg" kind="show" identifier="novoAluno" id="Nh7-h8-eC4"/>
                                 </connections>
@@ -185,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="108"/>
+            <point key="canvasLocation" x="893.60000000000002" y="107.49625187406298"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4Dk-8f-8Ze">

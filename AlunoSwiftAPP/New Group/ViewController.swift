@@ -24,6 +24,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         self.alunoTableview.dataSource = self
         self.alunoTableview.delegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         self.refresh.addTarget(self, action: #selector(getAlunos(_:)), for: .valueChanged)
         self.alunoTableview.refreshControl = self.refresh
         self.getAlunos(self)

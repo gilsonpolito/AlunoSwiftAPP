@@ -46,22 +46,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19EC05ED21BB6A2600A9AF4F /* Controller */ = {
+		19EC05ED21BB6A2600A9AF4F /* controller */ = {
 			isa = PBXGroup;
 			children = (
 				865CAE8121BB388A002134B5 /* NovoAlunoViewController.swift */,
 				865CAE6A21BB1E87002134B5 /* ViewController.swift */,
 			);
-			name = Controller;
+			name = controller;
 			path = "New Group";
 			sourceTree = "<group>";
 		};
-		19EC05EE21BB6A4100A9AF4F /* Cells */ = {
+		19EC05EE21BB6A4100A9AF4F /* cell */ = {
 			isa = PBXGroup;
 			children = (
 				865CAE7F21BB2A07002134B5 /* AlunoTableViewCell.swift */,
 			);
-			path = Cells;
+			path = cell;
 			sourceTree = "<group>";
 		};
 		29ABA98884FD65F02A48646B /* Pods */ = {
@@ -95,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				865CAE6821BB1E87002134B5 /* AppDelegate.swift */,
-				19EC05EE21BB6A4100A9AF4F /* Cells */,
-				19EC05ED21BB6A2600A9AF4F /* Controller */,
+				19EC05EE21BB6A4100A9AF4F /* cell */,
+				19EC05ED21BB6A2600A9AF4F /* controller */,
 				865CAE6C21BB1E87002134B5 /* Main.storyboard */,
 				865CAE7421BB1E88002134B5 /* LaunchScreen.storyboard */,
 				865CAE7221BB1E88002134B5 /* Assets.xcassets */,
