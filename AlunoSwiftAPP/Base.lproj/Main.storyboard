@@ -24,7 +24,7 @@
                                     <constraint firstAttribute="height" constant="30" id="lfk-sH-ymI"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sMw-gf-2Gv">
@@ -34,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="30" id="TIe-vw-snV"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OWd-KP-x37">
@@ -44,7 +44,7 @@
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="343" id="Rjs-eG-92e"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VZV-yF-e8B">
@@ -54,7 +54,7 @@
                                     <constraint firstAttribute="height" constant="30" id="PdL-LH-bMd"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nota" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rby-aX-jtV">
@@ -64,12 +64,20 @@
                                     <constraint firstAttribute="height" constant="30" id="RGJ-fy-jeV"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trt-wg-qYx">
-                                <rect key="frame" x="164" y="277" width="47" height="30"/>
-                                <state key="normal" title="Gravar"/>
+                                <rect key="frame" x="120" y="315" width="136" height="36"/>
+                                <color key="backgroundColor" red="0.1450980392" green="0.664805655" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="Aic-pO-lcT"/>
+                                    <constraint firstAttribute="height" constant="36" id="PyC-mT-hlz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                <state key="normal" title="Salvar Aluno">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="btnGravar:" destination="kw2-Cs-WTg" eventType="touchUpInside" id="1Mk-fe-IaS"/>
                                 </connections>
@@ -83,8 +91,8 @@
                             <constraint firstItem="nvd-ks-Ryp" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="16" id="ORT-8y-geR"/>
                             <constraint firstItem="sMw-gf-2Gv" firstAttribute="top" secondItem="nvd-ks-Ryp" secondAttribute="bottom" constant="8" id="Q68-5K-X5k"/>
                             <constraint firstItem="Rby-aX-jtV" firstAttribute="top" secondItem="VZV-yF-e8B" secondAttribute="bottom" constant="8" id="Qg8-sJ-w3g"/>
-                            <constraint firstItem="trt-wg-qYx" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="164" id="WSv-em-PCE"/>
-                            <constraint firstItem="trt-wg-qYx" firstAttribute="top" secondItem="Rby-aX-jtV" secondAttribute="bottom" constant="14" id="azY-Gx-3Uv"/>
+                            <constraint firstItem="trt-wg-qYx" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="120" id="WSv-em-PCE"/>
+                            <constraint firstItem="trt-wg-qYx" firstAttribute="top" secondItem="Rby-aX-jtV" secondAttribute="bottom" constant="52" id="azY-Gx-3Uv"/>
                             <constraint firstItem="nvd-ks-Ryp" firstAttribute="top" secondItem="e1W-5v-xVj" secondAttribute="top" constant="17" id="cpz-DC-iAq"/>
                             <constraint firstItem="e1W-5v-xVj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OWd-KP-x37" secondAttribute="trailing" symbolic="YES" id="gS0-JQ-wMf"/>
                             <constraint firstItem="sMw-gf-2Gv" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="16" id="jho-2e-b0D"/>
@@ -92,7 +100,6 @@
                             <constraint firstItem="OWd-KP-x37" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="16" id="qb4-eq-lmF"/>
                             <constraint firstItem="VZV-yF-e8B" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="16" id="rcS-xt-Ayh"/>
                             <constraint firstItem="Rby-aX-jtV" firstAttribute="leading" secondItem="e1W-5v-xVj" secondAttribute="leading" constant="16" id="s5w-yH-7a9"/>
-                            <constraint firstItem="trt-wg-qYx" firstAttribute="centerX" secondItem="Rby-aX-jtV" secondAttribute="centerX" id="srq-ZR-dvU"/>
                             <constraint firstItem="e1W-5v-xVj" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VZV-yF-e8B" secondAttribute="trailing" symbolic="YES" id="umc-fO-Fk2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e1W-5v-xVj"/>
@@ -107,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hb6-TV-Hu9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1650" y="107"/>
+            <point key="canvasLocation" x="1648.8" y="106.59670164917542"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -129,14 +136,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bQh-r8-n5L">
-                                                    <rect key="frame" x="318" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="312.5" y="11" width="47.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGm-6f-lOC">
-                                                    <rect key="frame" x="15" y="11" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="15" y="11" width="47.5" height="24"/>
+                                                    <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
