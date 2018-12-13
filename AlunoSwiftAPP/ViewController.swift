@@ -4,6 +4,7 @@ import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var alunoTableview: UITableView!
+    let endpoint = "https://gilsonpolito-api.herokuapp.com/alunos"
     
     var alunos = [[String:AnyObject]]()
     private let refresh = UIRefreshControl()
@@ -22,7 +23,21 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == UITableViewCell.EditingStyle.delete{
-            // implement delete
+            let dict = self.alunos[indexPath.row]
+            let deleteEndpoint = self.endpoint + "/" + (dict["id"]?.stringValue!)!
+            
+            Alamofire.request(deleteEndpoint, method: .delete)
+                .responseJSON { response in
+                    guard response.result.error == nil else {
+                        if let error = response.result.error {
+                            let alert = UIAlertController(title: "Falha", message: "Erro ao executar chamada na API\(error)", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+                            self.present(alert, animated: true)
+                        }
+                        return
+                    }
+                    self.atualizarTela()
+            }
         }
     }
     
@@ -32,14 +47,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         self.alunoTableview.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    func atualizarTela(){
         self.refresh.addTarget(self, action: #selector(getAlunos(_:)), for: .valueChanged)
         self.alunoTableview.refreshControl = self.refresh
         self.getAlunos(self)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.atualizarTela()
+    }
 
     @objc private func getAlunos(_ sender: Any){
-        Alamofire.request("https://gilsonpolito-api.herokuapp.com/alunos", method: .get).responseJSON{(responseData) -> Void in
+        Alamofire.request(self.endpoint, method: .get).responseJSON{(responseData) -> Void in
             let alunoJSON = JSON(responseData.result.value!)
             self.alunos = alunoJSON.arrayObject as! [[String:AnyObject]]
             if self.alunos.count > 0 {
