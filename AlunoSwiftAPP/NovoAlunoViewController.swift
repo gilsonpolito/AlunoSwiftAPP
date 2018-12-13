@@ -23,6 +23,7 @@ class NovoAlunoViewController: UIViewController {
     @IBAction func btnGravar(_ sender: Any) {
         let url = "https://gilsonpolito-api.herokuapp.com/alunos"
 
+
         var msg :String = ""
         if txtNome.text?.count == 0{
             msg += "Nome\n"
@@ -46,8 +47,7 @@ class NovoAlunoViewController: UIViewController {
             self.present(alert, animated: true)
             return
         }
-        
-       
+
         if aluno?.alunoId != nil {
             self.json = ["id":aluno?.alunoId as Any,"nome":txtNome.text!,"site":txtSite.text!,"telefone":txtTelefone.text!,"endereco":txtEndereco.text!, "nota":txtNota.text!]
             Alamofire.request(url, method: .put, parameters: json, encoding: JSONEncoding.default, headers:nil).responseJSON{(responseData) -> Void in

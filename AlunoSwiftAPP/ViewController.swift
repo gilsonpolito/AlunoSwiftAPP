@@ -74,17 +74,19 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "novoAluno" {
-            let indexPaths = self.alunoTableview!.indexPathsForSelectedRows!
-            let indexPath = indexPaths[0] as NSIndexPath
-            let vc = segue.destination as! NovoAlunoViewController
-            let dict = self.alunos[indexPath.row]
-            
-            vc.aluno = Aluno(alunoId: (dict["id"]?.stringValue)!
-                                , alunoNome: dict["nome"] as! String
-                                , alunoSite: dict["site"] as! String
-                                , alunoEndereco: dict["endereco"] as! String
-                                , alunoNota: (dict["nota"]?.stringValue)!
-                                , alunoTelefone: dict["telefone"] as! String)
+            if self.alunoTableview!.indexPathsForSelectedRows != nil {
+                let indexPaths = self.alunoTableview!.indexPathsForSelectedRows!
+                let indexPath = indexPaths[0] as NSIndexPath
+                let vc = segue.destination as! NovoAlunoViewController
+                let dict = self.alunos[indexPath.row]
+                
+                vc.aluno = Aluno(alunoId: (dict["id"]?.stringValue)!
+                                    , alunoNome: dict["nome"] as! String
+                                    , alunoSite: dict["site"] as! String
+                                    , alunoEndereco: dict["endereco"] as! String
+                                    , alunoNota: (dict["nota"]?.stringValue)!
+                                    , alunoTelefone: dict["telefone"] as! String)
+            }
         }
     }
     
