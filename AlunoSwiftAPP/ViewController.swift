@@ -78,8 +78,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let indexPath = indexPaths[0] as NSIndexPath
             let vc = segue.destination as! NovoAlunoViewController
             let dict = self.alunos[indexPath.row]
-            print(dict["nome"] as! String)
-            vc.txtNome?.text = dict["nome"] as? String
+            
+            vc.aluno = Aluno(alunoId: (dict["id"]?.stringValue)!
+                                , alunoNome: dict["nome"] as! String
+                                , alunoSite: dict["site"] as! String
+                                , alunoEndereco: dict["endereco"] as! String
+                                , alunoNota: (dict["nota"]?.stringValue)!
+                                , alunoTelefone: dict["telefone"] as! String)
         }
     }
     

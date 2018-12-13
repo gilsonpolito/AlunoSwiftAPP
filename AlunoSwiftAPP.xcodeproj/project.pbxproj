@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51B4E6C3F16657CF520E1190 /* Pods_AlunoSwiftAPP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD7F715E535B6492C192AC5 /* Pods_AlunoSwiftAPP.framework */; };
+		861A850B21C309A40009E7B2 /* Aluno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 861A850A21C309A40009E7B2 /* Aluno.swift */; };
 		865CAE6921BB1E87002134B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CAE6821BB1E87002134B5 /* AppDelegate.swift */; };
 		865CAE6B21BB1E87002134B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865CAE6A21BB1E87002134B5 /* ViewController.swift */; };
 		865CAE6E21BB1E87002134B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 865CAE6C21BB1E87002134B5 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		3BD7F715E535B6492C192AC5 /* Pods_AlunoSwiftAPP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AlunoSwiftAPP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		476C7ED06DECDC2F0E8F0826 /* Pods-AlunoSwiftAPP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlunoSwiftAPP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlunoSwiftAPP/Pods-AlunoSwiftAPP.debug.xcconfig"; sourceTree = "<group>"; };
+		861A850A21C309A40009E7B2 /* Aluno.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aluno.swift; sourceTree = "<group>"; };
 		865CAE6521BB1E87002134B5 /* AlunoSwiftAPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlunoSwiftAPP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		865CAE6821BB1E87002134B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		865CAE6A21BB1E87002134B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		861A850921C3098E0009E7B2 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				861A850A21C309A40009E7B2 /* Aluno.swift */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		865CAE5C21BB1E87002134B5 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				865CAE6821BB1E87002134B5 /* AppDelegate.swift */,
+				861A850921C3098E0009E7B2 /* model */,
 				19EC05EF21BB836E00A9AF4F /* controller */,
 				19EC05F021BB838200A9AF4F /* cell */,
 				865CAE6C21BB1E87002134B5 /* Main.storyboard */,
@@ -240,6 +251,7 @@
 				865CAE6B21BB1E87002134B5 /* ViewController.swift in Sources */,
 				865CAE8021BB2A07002134B5 /* AlunoTableViewCell.swift in Sources */,
 				865CAE7121BB1E87002134B5 /* AlunoSwiftAPP.xcdatamodeld in Sources */,
+				861A850B21C309A40009E7B2 /* Aluno.swift in Sources */,
 				865CAE6921BB1E87002134B5 /* AppDelegate.swift in Sources */,
 				865CAE8221BB388A002134B5 /* NovoAlunoViewController.swift in Sources */,
 			);
